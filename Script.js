@@ -146,6 +146,48 @@ const clone = JSON.parse(JSON.stringify(multiarray));
 clone[3].push("Goodafternoon");
 console.log(multiarray);
 
+//Destructuring Arrays 
 
+const people = ["Jeff", Geoff, Djef];
+const [person1, person2, person3] = people;
+console.log(person3); 'Djef'
+
+//Objects 
+
+const jobHours = {
+    office: "9am-5pc",
+    fisherman: "5am-9pm",
+    DeptoHomeAffairs: "10am-4pm",
+
+};
+
+const {office, fisherman, DeptoHomeAffairs} = jobHours:
+console.log(DeptoHomeAffairs);
+
+
+//Functions 
+
+function getUniqueId() {
+    return new Date.now();
+
+}
+
+const createSchedule = (creator, workHours, leisureHours) => {
+    return {
+        id; getUniqueId(),
+        creator: creator, 
+        workHours: workHours,
+        leisureHours: updateLeisureHours(leisureHours),
+
+    }
+}
+
+//Methods 
+
+Function updateLeisureHours (leisureHours) {
+    const newHours = "10pm";
+    const updateLeisureHours = leisureHours.slice(0, -4) + newHours;
+    return updatedHours;
+}
 
 
